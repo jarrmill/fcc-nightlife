@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {TEST_ACTION, GET_RESTS, RSVP, ERROR} from './types';
 
-const root_url= 'http://localhost:5000/nightlife';
+const root_url= (process.env.DB_PATH) ? process.env.DB_PATH : 'http://localhost:5000/nightlife';
 
 export function testAction(){
   return {type: TEST_ACTION};
