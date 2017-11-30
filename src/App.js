@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Navbar, Button } from 'react-bootstrap';
 import { Header, HeaderButton } from './container_styling';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
 
 import './App.css';
 
@@ -23,7 +22,6 @@ class App extends Component {
     this.props.auth.logout();
   }
   render() {
-    const env = runtimeEnv();
     const { isAuthenticated } = this.props.auth;
     const AuthBool = this.props.reduxAuth.authenticated;
     const RestsBool = (this.props.restaurants) ? true : false;

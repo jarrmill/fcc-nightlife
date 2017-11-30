@@ -1,8 +1,7 @@
 import axios from 'axios';
 import {TEST_ACTION, GET_RESTS, RSVP, ERROR} from './types';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
 
-const root_url= env.DB_PATH;
+const root_url= env.REACT_APP_DB_PATH;
 if (!root_url){
   console.log("Difficulty finding database path in environment");
 }
