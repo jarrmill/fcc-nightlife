@@ -21,6 +21,7 @@ class App extends Component {
     this.props.auth.logout();
   }
   render() {
+    const env = runtimeEnv();
     const { isAuthenticated } = this.props.auth;
     const AuthBool = this.props.reduxAuth.authenticated;
     const RestsBool = (this.props.restaurants) ? true : false;
