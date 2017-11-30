@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Navbar, Button } from 'react-bootstrap';
 import { Header, HeaderButton } from './container_styling';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
+
 import './App.css';
 
 class App extends Component {
