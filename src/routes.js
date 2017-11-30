@@ -50,7 +50,7 @@ export const makeMainRoutes = () => {
             )} />
             <Route path="/callback" render={(props) => {
               handleAuthentication(props);
-              return <Callback auth={auth} {...props} />
+              return <Callback {...props} />
             }}/>
           </MainContainer>
         </Router>

@@ -54,7 +54,7 @@ export default class Auth {
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/search');
   }
 
   getAccessToken() {
@@ -84,7 +84,7 @@ export default class Auth {
     this.userProfile = null;
     store.dispatch({type: types.DEAUTH_USER, payload: null});
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/search');
   }
 
   isAuthenticated() {
