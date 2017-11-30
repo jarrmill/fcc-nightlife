@@ -36,9 +36,9 @@ export default class Auth {
         this.getProfile((err, profile) => {
           console.log("Set profile");
         });
-        history.replace('/home');
+        history.replace('/search');
       } else if (err) {
-        history.replace('/home');
+        history.replace('/search');
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
