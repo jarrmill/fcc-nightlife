@@ -18,7 +18,7 @@ export function getRestaurants(city){
             console.log("Bad city name");
             dispatch({type: ERROR, payload: "bad_city"});
           }
-          console.log("Received city data for ", city);
+          console.log("Received city data for ", city, response.data);
           dispatch({type: GET_RESTS, payload: response.data});
       }).catch(
         (error) => { console.error(error);
