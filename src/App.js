@@ -25,7 +25,6 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
     const AuthBool = this.props.reduxAuth.authenticated;
     const RestsBool = (this.props.restaurants) ? true : false;
-    console.log("ReduxAuth: ", this.props.reduxAuth);
     return (
       <div>
         <Header>

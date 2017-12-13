@@ -2,8 +2,10 @@ import axios from 'axios';
 import {TEST_ACTION, GET_RESTS, RSVP, ERROR} from './types';
 
 const root_url= process.env.REACT_APP_DB_PATH;
+//const root_url = "http://localhost:3091/nightlife";
 if (!root_url){
   console.log("Difficulty finding database path in environment");
+  console.log("root_url");
 }
 
 export function testAction(){
@@ -16,6 +18,7 @@ export function getRestaurants(city){
             console.log("Bad city name");
             dispatch({type: ERROR, payload: "bad_city"});
           }
+          console.log("Received city data for ", city);
           dispatch({type: GET_RESTS, payload: response.data});
       }).catch(
         (error) => { console.error(error);

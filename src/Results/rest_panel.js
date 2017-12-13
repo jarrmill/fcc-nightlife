@@ -20,8 +20,6 @@ const Panel = ({restaurant, key, rsvp, auth}) => {
 }
 
 function renderButton(rsvpAction, rest, rsvps, auth) {
-  console.log("Guest auth: ", auth.authenticated);
-  console.log("Guest nickname: ", auth.user.nickname);
   if (auth.authenticated && auth.user.nickname){
     var rsvpIndex = rsvps.indexOf(auth.user.nickname);
     if(rsvpIndex == -1){
